@@ -1,4 +1,8 @@
 import 'package:elearn_platform/constants/colors.dart';
+import 'package:elearn_platform/screens/home/widgets/category_title.dart';
+import 'package:elearn_platform/screens/home/widgets/course_item.dart';
+import 'package:elearn_platform/screens/home/widgets/emoji_text.dart';
+import 'package:elearn_platform/screens/home/widgets/search_input.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,13 +12,24 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _buildAppBar(),
-      body: Text("Home page"),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            EmojiText(),
+            SearchInput(),
+            CategoryTitle(title: "Top of the week", subtitle:"View All"),
+            CourseItem()
+          ],
+        ),
+      ),
     );
   }
 
 
 
-  
+
 
   AppBar _buildAppBar() {
     return AppBar(
