@@ -1,7 +1,9 @@
 import 'package:elearn_platform/constants/colors.dart';
+import 'package:elearn_platform/screens/home/widgets/active_course.dart';
 import 'package:elearn_platform/screens/home/widgets/category_title.dart';
 import 'package:elearn_platform/screens/home/widgets/course_item.dart';
 import 'package:elearn_platform/screens/home/widgets/emoji_text.dart';
+import 'package:elearn_platform/screens/home/widgets/featured_course.dart';
 import 'package:elearn_platform/screens/home/widgets/search_input.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +21,10 @@ class HomePage extends StatelessWidget {
           children: [
             EmojiText(),
             SearchInput(),
-            CategoryTitle(title: "Top of the week", subtitle:"View All"),
-            CourseItem()
+            FeaturedCourse(),
+            ActiveCourse()
+            
+            // CourseItem()
           ],
         ),
       ),

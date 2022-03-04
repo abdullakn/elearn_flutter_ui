@@ -1,8 +1,10 @@
 import 'package:elearn_platform/constants/colors.dart';
+import 'package:elearn_platform/models/course.dart';
 import 'package:flutter/material.dart';
 
 class CourseItem extends StatelessWidget {
-  const CourseItem({Key? key}) : super(key: key);
+  final Course course;
+  CourseItem({required this.course});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class CourseItem extends StatelessWidget {
                             topLeft: Radius.circular(20),
                             topRight: Radius.circular(20)),
                         child: Image.asset(
-                          "assets/images/course-4.jpg",
+                          course.imageUrl,
                           fit: BoxFit.cover,
                         ))),
                 SizedBox(
@@ -48,7 +50,7 @@ class CourseItem extends StatelessWidget {
                                 width: 5,
                               ),
                               Text(
-                                "Amal Neerad",
+                                course.author,
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               )
                             ],
@@ -59,7 +61,7 @@ class CourseItem extends StatelessWidget {
                           Row(
                             children: [
                               Text(
-                                "Painting ",
+                                course.title,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: kFont,
