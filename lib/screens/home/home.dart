@@ -27,8 +27,39 @@ class HomePage extends StatelessWidget {
             // CourseItem()
           ],
         ),
+      
       ),
+
+    bottomNavigationBar: _buildBottomNavBar(),  
     );
+  }
+
+
+
+  
+
+  BottomNavigationBar _buildBottomNavBar() {
+    return BottomNavigationBar(
+    type: BottomNavigationBarType.fixed,
+    backgroundColor: kBackground,
+    showSelectedLabels: false,
+    showUnselectedLabels: false,
+    items:[
+
+      BottomNavigationBarItem(icon:Container(
+        padding: EdgeInsets.only(bottom: 5),
+        decoration: BoxDecoration(
+          border: Border(bottom: BorderSide(color: kAccent,width: 2)),
+          
+        ),
+        child: Text('Home',
+        style: TextStyle(fontWeight: FontWeight.bold),),
+      ) ,label: 'Home'),
+      BottomNavigationBarItem(icon: Icon(Icons.calendar_today),label: 'Home'),
+      BottomNavigationBarItem(icon: Icon(Icons.bookmark),label: 'Home'),
+      BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Home')
+
+  ]);
   }
 
 
