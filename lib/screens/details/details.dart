@@ -1,5 +1,6 @@
 import 'package:elearn_platform/models/course.dart';
 import 'package:elearn_platform/screens/details/widgets/course_description.dart';
+import 'package:elearn_platform/screens/details/widgets/course_progress.dart';
 import 'package:elearn_platform/screens/details/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,8 @@ class DetailsPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             CustomAppBar(course: course),
-            CourseDescription(course: course,)
+            CourseDescription(course: course,),
+            CourseProgress()
           ],
         ),
       )
